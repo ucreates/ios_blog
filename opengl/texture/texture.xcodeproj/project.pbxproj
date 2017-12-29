@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		819AC8031F1718F0008B1CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819AC8021F1718F0008B1CF8 /* Assets.xcassets */; };
+		819AC86F1F17195C008B1CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC82A1F17195C008B1CF8 /* AppDelegate.swift */; };
+		819AC8701F17195C008B1CF8 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC82F1F17195C008B1CF8 /* Transform.swift */; };
+		819AC8711F17195C008B1CF8 /* GLESColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8311F17195C008B1CF8 /* GLESColor.swift */; };
+		819AC8721F17195C008B1CF8 /* IndexBufferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8321F17195C008B1CF8 /* IndexBufferObject.swift */; };
+		819AC8731F17195C008B1CF8 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8331F17195C008B1CF8 /* Vertex.swift */; };
+		819AC8751F17195C008B1CF8 /* VertexBufferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8351F17195C008B1CF8 /* VertexBufferObject.swift */; };
+		819AC8761F17195C008B1CF8 /* GLKMatrix+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8371F17195C008B1CF8 /* GLKMatrix+Array.swift */; };
+		819AC8771F17195C008B1CF8 /* Allocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC83A1F17195C008B1CF8 /* Allocator.swift */; };
+		819AC8781F17195C008B1CF8 /* TraceUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC83C1F17195C008B1CF8 /* TraceUtility.swift */; };
+		819AC8791F17195C008B1CF8 /* BaseBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC83F1F17195C008B1CF8 /* BaseBehaviour.swift */; };
+		819AC87C1F17195C008B1CF8 /* BaseRenderAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8451F17195C008B1CF8 /* BaseRenderAsset.swift */; };
+		819AC87D1F17195C008B1CF8 /* BaseModelAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8471F17195C008B1CF8 /* BaseModelAsset.swift */; };
+		819AC87E1F17195C008B1CF8 /* CubeAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8481F17195C008B1CF8 /* CubeAsset.swift */; };
+		819AC87F1F17195C008B1CF8 /* TextureAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8491F17195C008B1CF8 /* TextureAsset.swift */; };
+		819AC8801F17195C008B1CF8 /* GLES2ShaderAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC84B1F17195C008B1CF8 /* GLES2ShaderAsset.swift */; };
+		819AC8811F17195C008B1CF8 /* GLES2Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC84D1F17195C008B1CF8 /* GLES2Camera.swift */; };
+		819AC8821F17195C008B1CF8 /* BaseRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC84F1F17195C008B1CF8 /* BaseRenderer.swift */; };
+		819AC8831F17195C008B1CF8 /* GLES2Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8501F17195C008B1CF8 /* GLES2Renderer.swift */; };
+		819AC8861F17195C008B1CF8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8551F17195C008B1CF8 /* BaseView.swift */; };
+		819AC8871F17195C008B1CF8 /* GLES2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8561F17195C008B1CF8 /* GLES2View.swift */; };
+		819AC88E1F17195C008B1CF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC85E1F17195C008B1CF8 /* MainViewController.swift */; };
+		819AC8961F17195C008B1CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819AC86C1F17195C008B1CF8 /* LaunchScreen.storyboard */; };
+		819AC8981F17195C008B1CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819AC86E1F17195C008B1CF8 /* Main.storyboard */; };
+		819AC89C1F17196E008B1CF8 /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = 819AC89A1F17196E008B1CF8 /* Textures */; };
+		819AC8A01F171F37008B1CF8 /* Shaderes in Resources */ = {isa = PBXBuildFile; fileRef = 819AC89F1F171F37008B1CF8 /* Shaderes */; };
+		819AC8A21F171F91008B1CF8 /* TextureBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AC8A11F171F91008B1CF8 /* TextureBehaviour.swift */; };
+		81B4CE141F3D57BC003F6693 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4CE131F3D57BC003F6693 /* Angle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		819AC7F81F1718F0008B1CF8 /* texture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = texture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AC8021F1718F0008B1CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		819AC8071F1718F0008B1CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		819AC82A1F17195C008B1CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		819AC82F1F17195C008B1CF8 /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		819AC8311F17195C008B1CF8 /* GLESColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLESColor.swift; sourceTree = "<group>"; };
+		819AC8321F17195C008B1CF8 /* IndexBufferObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexBufferObject.swift; sourceTree = "<group>"; };
+		819AC8331F17195C008B1CF8 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		819AC8351F17195C008B1CF8 /* VertexBufferObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexBufferObject.swift; sourceTree = "<group>"; };
+		819AC8371F17195C008B1CF8 /* GLKMatrix+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GLKMatrix+Array.swift"; sourceTree = "<group>"; };
+		819AC83A1F17195C008B1CF8 /* Allocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allocator.swift; sourceTree = "<group>"; };
+		819AC83C1F17195C008B1CF8 /* TraceUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceUtility.swift; sourceTree = "<group>"; };
+		819AC83F1F17195C008B1CF8 /* BaseBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBehaviour.swift; sourceTree = "<group>"; };
+		819AC8451F17195C008B1CF8 /* BaseRenderAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRenderAsset.swift; sourceTree = "<group>"; };
+		819AC8471F17195C008B1CF8 /* BaseModelAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModelAsset.swift; sourceTree = "<group>"; };
+		819AC8481F17195C008B1CF8 /* CubeAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeAsset.swift; sourceTree = "<group>"; };
+		819AC8491F17195C008B1CF8 /* TextureAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureAsset.swift; sourceTree = "<group>"; };
+		819AC84B1F17195C008B1CF8 /* GLES2ShaderAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLES2ShaderAsset.swift; sourceTree = "<group>"; };
+		819AC84D1F17195C008B1CF8 /* GLES2Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLES2Camera.swift; sourceTree = "<group>"; };
+		819AC84F1F17195C008B1CF8 /* BaseRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRenderer.swift; sourceTree = "<group>"; };
+		819AC8501F17195C008B1CF8 /* GLES2Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLES2Renderer.swift; sourceTree = "<group>"; };
+		819AC8551F17195C008B1CF8 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		819AC8561F17195C008B1CF8 /* GLES2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLES2View.swift; sourceTree = "<group>"; };
+		819AC85E1F17195C008B1CF8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		819AC86C1F17195C008B1CF8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		819AC86E1F17195C008B1CF8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		819AC89A1F17196E008B1CF8 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
+		819AC89F1F171F37008B1CF8 /* Shaderes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shaderes; sourceTree = "<group>"; };
+		819AC8A11F171F91008B1CF8 /* TextureBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureBehaviour.swift; sourceTree = "<group>"; };
+		81B4CE131F3D57BC003F6693 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		819AC7F51F1718F0008B1CF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		819AC7EF1F1718F0008B1CF8 = {
+			isa = PBXGroup;
+			children = (
+				819AC7FA1F1718F0008B1CF8 /* texture */,
+				819AC7F91F1718F0008B1CF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		819AC7F91F1718F0008B1CF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				819AC7F81F1718F0008B1CF8 /* texture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		819AC7FA1F1718F0008B1CF8 /* texture */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8291F17195C008B1CF8 /* Classes */,
+				819AC85F1F17195C008B1CF8 /* Resources */,
+				819AC8691F17195C008B1CF8 /* Storyboards */,
+				819AC8021F1718F0008B1CF8 /* Assets.xcassets */,
+				819AC8071F1718F0008B1CF8 /* Info.plist */,
+			);
+			path = texture;
+			sourceTree = "<group>";
+		};
+		819AC8291F17195C008B1CF8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				819AC82A1F17195C008B1CF8 /* AppDelegate.swift */,
+				819AC82B1F17195C008B1CF8 /* Core */,
+				819AC83D1F17195C008B1CF8 /* Frontend */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		819AC82B1F17195C008B1CF8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				81B4CE121F3D57BC003F6693 /* Math */,
+				819AC82C1F17195C008B1CF8 /* Entity */,
+				819AC8361F17195C008B1CF8 /* Extension */,
+				819AC8381F17195C008B1CF8 /* IO */,
+				819AC83B1F17195C008B1CF8 /* Utility */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		819AC82C1F17195C008B1CF8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				819AC82D1F17195C008B1CF8 /* Component */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		819AC82D1F17195C008B1CF8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				819AC82E1F17195C008B1CF8 /* Asset */,
+				819AC8301F17195C008B1CF8 /* Renderer */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		819AC82E1F17195C008B1CF8 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				819AC82F1F17195C008B1CF8 /* Transform.swift */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		819AC8301F17195C008B1CF8 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8311F17195C008B1CF8 /* GLESColor.swift */,
+				819AC8321F17195C008B1CF8 /* IndexBufferObject.swift */,
+				819AC8331F17195C008B1CF8 /* Vertex.swift */,
+				819AC8351F17195C008B1CF8 /* VertexBufferObject.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		819AC8361F17195C008B1CF8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8371F17195C008B1CF8 /* GLKMatrix+Array.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		819AC8381F17195C008B1CF8 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8391F17195C008B1CF8 /* Memory */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		819AC8391F17195C008B1CF8 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				819AC83A1F17195C008B1CF8 /* Allocator.swift */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		819AC83B1F17195C008B1CF8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				819AC83C1F17195C008B1CF8 /* TraceUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		819AC83D1F17195C008B1CF8 /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				819AC83E1F17195C008B1CF8 /* Behaviour */,
+				819AC8421F17195C008B1CF8 /* Component */,
+				819AC8541F17195C008B1CF8 /* View */,
+				819AC8581F17195C008B1CF8 /* ViewController */,
+			);
+			path = Frontend;
+			sourceTree = "<group>";
+		};
+		819AC83E1F17195C008B1CF8 /* Behaviour */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8A11F171F91008B1CF8 /* TextureBehaviour.swift */,
+				819AC83F1F17195C008B1CF8 /* BaseBehaviour.swift */,
+			);
+			path = Behaviour;
+			sourceTree = "<group>";
+		};
+		819AC8421F17195C008B1CF8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8431F17195C008B1CF8 /* Asset */,
+				819AC84C1F17195C008B1CF8 /* Camera */,
+				819AC84E1F17195C008B1CF8 /* Renderer */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		819AC8431F17195C008B1CF8 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8441F17195C008B1CF8 /* Render */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		819AC8441F17195C008B1CF8 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8451F17195C008B1CF8 /* BaseRenderAsset.swift */,
+				819AC8461F17195C008B1CF8 /* Model */,
+				819AC84A1F17195C008B1CF8 /* Shader */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		819AC8461F17195C008B1CF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8471F17195C008B1CF8 /* BaseModelAsset.swift */,
+				819AC8481F17195C008B1CF8 /* CubeAsset.swift */,
+				819AC8491F17195C008B1CF8 /* TextureAsset.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		819AC84A1F17195C008B1CF8 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				819AC84B1F17195C008B1CF8 /* GLES2ShaderAsset.swift */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		819AC84C1F17195C008B1CF8 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				819AC84D1F17195C008B1CF8 /* GLES2Camera.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		819AC84E1F17195C008B1CF8 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				819AC84F1F17195C008B1CF8 /* BaseRenderer.swift */,
+				819AC8501F17195C008B1CF8 /* GLES2Renderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		819AC8541F17195C008B1CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				819AC8551F17195C008B1CF8 /* BaseView.swift */,
+				819AC8561F17195C008B1CF8 /* GLES2View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		819AC8581F17195C008B1CF8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				819AC85E1F17195C008B1CF8 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		819AC85F1F17195C008B1CF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				819AC89F1F171F37008B1CF8 /* Shaderes */,
+				819AC89A1F17196E008B1CF8 /* Textures */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		819AC8691F17195C008B1CF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				819AC86C1F17195C008B1CF8 /* LaunchScreen.storyboard */,
+				819AC86E1F17195C008B1CF8 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		81B4CE121F3D57BC003F6693 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				81B4CE131F3D57BC003F6693 /* Angle.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		819AC7F71F1718F0008B1CF8 /* texture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AC8201F1718F0008B1CF8 /* Build configuration list for PBXNativeTarget "texture" */;
+			buildPhases = (
+				819AC7F41F1718F0008B1CF8 /* Sources */,
+				819AC7F51F1718F0008B1CF8 /* Frameworks */,
+				819AC7F61F1718F0008B1CF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = texture;
+			productName = texture;
+			productReference = 819AC7F81F1718F0008B1CF8 /* texture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		819AC7F01F1718F0008B1CF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "柾本 耕太郎";
+				TargetAttributes = {
+					819AC7F71F1718F0008B1CF8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = C9V674GA4T;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 819AC7F31F1718F0008B1CF8 /* Build configuration list for PBXProject "texture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 819AC7EF1F1718F0008B1CF8;
+			productRefGroup = 819AC7F91F1718F0008B1CF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				819AC7F71F1718F0008B1CF8 /* texture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		819AC7F61F1718F0008B1CF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AC8961F17195C008B1CF8 /* LaunchScreen.storyboard in Resources */,
+				819AC8A01F171F37008B1CF8 /* Shaderes in Resources */,
+				819AC89C1F17196E008B1CF8 /* Textures in Resources */,
+				819AC8981F17195C008B1CF8 /* Main.storyboard in Resources */,
+				819AC8031F1718F0008B1CF8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		819AC7F41F1718F0008B1CF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AC8A21F171F91008B1CF8 /* TextureBehaviour.swift in Sources */,
+				819AC8791F17195C008B1CF8 /* BaseBehaviour.swift in Sources */,
+				819AC8831F17195C008B1CF8 /* GLES2Renderer.swift in Sources */,
+				819AC8751F17195C008B1CF8 /* VertexBufferObject.swift in Sources */,
+				819AC8701F17195C008B1CF8 /* Transform.swift in Sources */,
+				819AC8871F17195C008B1CF8 /* GLES2View.swift in Sources */,
+				819AC8781F17195C008B1CF8 /* TraceUtility.swift in Sources */,
+				819AC8811F17195C008B1CF8 /* GLES2Camera.swift in Sources */,
+				819AC87F1F17195C008B1CF8 /* TextureAsset.swift in Sources */,
+				819AC8821F17195C008B1CF8 /* BaseRenderer.swift in Sources */,
+				819AC87C1F17195C008B1CF8 /* BaseRenderAsset.swift in Sources */,
+				819AC86F1F17195C008B1CF8 /* AppDelegate.swift in Sources */,
+				819AC87D1F17195C008B1CF8 /* BaseModelAsset.swift in Sources */,
+				819AC8771F17195C008B1CF8 /* Allocator.swift in Sources */,
+				819AC8861F17195C008B1CF8 /* BaseView.swift in Sources */,
+				819AC87E1F17195C008B1CF8 /* CubeAsset.swift in Sources */,
+				819AC88E1F17195C008B1CF8 /* MainViewController.swift in Sources */,
+				819AC8711F17195C008B1CF8 /* GLESColor.swift in Sources */,
+				819AC8801F17195C008B1CF8 /* GLES2ShaderAsset.swift in Sources */,
+				819AC8731F17195C008B1CF8 /* Vertex.swift in Sources */,
+				81B4CE141F3D57BC003F6693 /* Angle.swift in Sources */,
+				819AC8761F17195C008B1CF8 /* GLKMatrix+Array.swift in Sources */,
+				819AC8721F17195C008B1CF8 /* IndexBufferObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		819AC81E1F1718F0008B1CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		819AC81F1F1718F0008B1CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		819AC8211F1718F0008B1CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C9V674GA4T;
+				INFOPLIST_FILE = texture/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucreates.blog.texture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		819AC8221F1718F0008B1CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C9V674GA4T;
+				INFOPLIST_FILE = texture/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucreates.blog.texture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		819AC7F31F1718F0008B1CF8 /* Build configuration list for PBXProject "texture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AC81E1F1718F0008B1CF8 /* Debug */,
+				819AC81F1F1718F0008B1CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AC8201F1718F0008B1CF8 /* Build configuration list for PBXNativeTarget "texture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AC8211F1718F0008B1CF8 /* Debug */,
+				819AC8221F1718F0008B1CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 819AC7F01F1718F0008B1CF8 /* Project object */;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o4C-tx-3Kj">
+  <device id="retina4_7" orientation="portrait">
+    <adaptation id="fullscreen" />
+  </device>
+  <dependencies>
+    <deployment identifier="iOS" />
+    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089" />
+    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
+  </dependencies>
+  <scenes>
+    <!--GLKit View Controller-->
+    <scene sceneID="fjq-6Q-5Ts">
+      <objects>
+        <glkViewController preferredFramesPerSecond="30" id="o4C-tx-3Kj" customClass="MainViewController" customModule="texture" customModuleProvider="target" sceneMemberID="viewController">
+          <layoutGuides>
+            <viewControllerLayoutGuide type="top" id="oBU-8H-JQd" />
+            <viewControllerLayoutGuide type="bottom" id="I5m-Mn-mFC" />
+          </layoutGuides>
+          <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="MMQ-3y-lvl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667" />
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+            <connections>
+              <outlet property="delegate" destination="o4C-tx-3Kj" id="yHb-Xf-DDH" />
+            </connections>
+          </glkView>
+        </glkViewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="QDh-Ex-ed3" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="417" y="-384" />
+    </scene>
+  </scenes>
+</document>
