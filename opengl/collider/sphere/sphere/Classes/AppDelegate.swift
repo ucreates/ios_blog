@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-    func saveContext () {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -52,4 +52,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
-

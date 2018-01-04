@@ -12,7 +12,7 @@ open class CubeAsset: BaseModelAsset {
     init() {
         super.init(type: BaseModelAsset.CUBE)
     }
-    override open func create() {
+    open override func create() -> Void {
         self.vertices = [
             // Front
             0.5, -0.5, 0.5, self.color.r, self.color.g, self.color.b, self.color.a, 1, 0, // 0
@@ -43,35 +43,29 @@ open class CubeAsset: BaseModelAsset {
             0.5, -0.5, -0.5, self.color.r, self.color.g, self.color.b, self.color.a, 1, 0, // 12
             0.5, -0.5, 0.5, self.color.r, self.color.g, self.color.b, self.color.a, 1, 1, // 13
             -0.5, -0.5, 0.5, self.color.r, self.color.g, self.color.b, self.color.a, 0, 1, // 14
-            -0.5, -0.5, -0.5, self.color.r, self.color.g, self.color.b, self.color.a, 0, 0 // 15
+            -0.5, -0.5, -0.5, self.color.r, self.color.g, self.color.b, self.color.a, 0, 0, // 15
         ]
         self.indices = [
             // Front
             0, 1, 2,
             2, 3, 0,
-
             // Back
             4, 5, 6,
             6, 7, 4,
-
             // Left
             3, 2, 5,
             5, 4, 3,
-
             // Right
             7, 6, 1,
             1, 0, 7,
-
             // Top
             1, 6, 5,
             5, 2, 1,
-
             // Bottom
             3, 4, 7,
-            7, 0, 3
+            7, 0, 3,
         ]
         super.create()
         return
     }
 }
-

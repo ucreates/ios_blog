@@ -12,9 +12,9 @@ open class VertexBufferObject {
     open static let COORDS_PER_VERTEX: Int = 3
     open static let COLORS_PER_VERTEX: Int = 4
     open static let UV_PER_VERTEX: Int = 2
-    open static let POSITION_START_POINTER: UnsafeRawPointer? = UnsafeRawPointer.init(bitPattern: 0)
-    open static let COLOR_START_POINTER: UnsafeRawPointer? = UnsafeRawPointer.init(bitPattern: VertexBufferObject.COORDS_PER_VERTEX * MemoryLayout<GLfloat>.size)
-    open static let UV_START_POINTER: UnsafeRawPointer? = UnsafeRawPointer.init(bitPattern: (VertexBufferObject.COORDS_PER_VERTEX + VertexBufferObject.COLORS_PER_VERTEX) * MemoryLayout<GLfloat>.size)
+    open static let POSITION_START_POINTER: UnsafeRawPointer? = UnsafeRawPointer(bitPattern: 0)
+    open static let COLOR_START_POINTER: UnsafeRawPointer? = UnsafeRawPointer(bitPattern: VertexBufferObject.COORDS_PER_VERTEX * MemoryLayout<GLfloat>.size)
+    open static let UV_START_POINTER: UnsafeRawPointer? = UnsafeRawPointer(bitPattern: (VertexBufferObject.COORDS_PER_VERTEX + VertexBufferObject.COLORS_PER_VERTEX) * MemoryLayout<GLfloat>.size)
     open var id: GLuint = 0
     open var stride: Int = 0
     open func create(vertices: [GLfloat], rendereAssetType: Int) -> Void {

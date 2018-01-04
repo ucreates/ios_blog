@@ -12,7 +12,7 @@ open class GLES2ShaderAsset: BaseRenderAsset {
     fileprivate var handle: GLuint
     fileprivate var path: String
     fileprivate var type: GLuint
-    init (shaderAssetPath: String, shaderType: GLenum) {
+    init(shaderAssetPath: String, shaderType: GLenum) {
         self.handle = 0
         self.path = shaderAssetPath
         self.type = shaderType

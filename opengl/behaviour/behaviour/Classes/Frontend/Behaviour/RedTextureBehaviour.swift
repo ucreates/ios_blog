@@ -10,7 +10,7 @@
 import GLKit
 open class RedTextureBehaviour: BaseBehaviour {
     fileprivate var counter: Float!
-    override open func onCreate() -> Void {
+    open override func onCreate() -> Void {
         let vartexSharder: GLES2ShaderAsset = GLES2ShaderAsset(shaderAssetPath: "Shaderes/Texture/vertex_shader.glsl", shaderType: GLenum(GL_VERTEX_SHADER))
         let fragmentSharder: GLES2ShaderAsset = GLES2ShaderAsset(shaderAssetPath: "Shaderes/Texture/fragment_shader.glsl", shaderType: GLenum(GL_FRAGMENT_SHADER))
         self.renderAsset = TextureAsset(textureAssetPath: "Textures/texture01.png")
@@ -27,7 +27,7 @@ open class RedTextureBehaviour: BaseBehaviour {
         self.counter = 0.0
         return
     }
-    override open func onUpdate(delta: TimeInterval) -> Void {
+    open override func onUpdate(delta: TimeInterval) -> Void {
         self.counter = self.counter + 0.1
         let nx: Float = self.renderAsset.transform.position.x
         let ny: Float = cos(self.counter)

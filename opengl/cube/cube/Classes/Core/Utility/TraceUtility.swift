@@ -16,7 +16,7 @@ open class TraceUtility {
         return
     }
     open static func log(val: [GLchar]) -> Void {
-        let info:String = String(validatingUTF8: val)!
+        let info: String = String(validatingUTF8: val)!
         TraceUtility.log(val: info)
         return
     }

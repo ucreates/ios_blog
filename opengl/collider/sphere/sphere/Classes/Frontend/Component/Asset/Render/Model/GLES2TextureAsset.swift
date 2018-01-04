@@ -15,7 +15,7 @@ open class GLES2TextureAsset: GLES2BaseModelAsset {
         self.GLES2TextureAssetPath = GLES2TextureAssetPath
         super.init(type: GLES2BaseModelAsset.TEXTURE)
     }
-    open override func create() {
+    open override func create() -> Void {
         self.vertices = [
             // Front
             0.5, -0.5, 0.5, self.color.r, self.color.g, self.color.b, self.color.a, 1, 0, // 0
@@ -46,7 +46,7 @@ open class GLES2TextureAsset: GLES2BaseModelAsset {
             0.5, -0.5, -0.5, self.color.r, self.color.g, self.color.b, self.color.a, 1, 0, // 12
             0.5, -0.5, 0.5, self.color.r, self.color.g, self.color.b, self.color.a, 1, 1, // 13
             -0.5, -0.5, 0.5, self.color.r, self.color.g, self.color.b, self.color.a, 0, 1, // 14
-            -0.5, -0.5, -0.5, self.color.r, self.color.g, self.color.b, self.color.a, 0, 0 // 15
+            -0.5, -0.5, -0.5, self.color.r, self.color.g, self.color.b, self.color.a, 0, 0, // 15
         ]
         self.indices = [
             // Front
@@ -66,7 +66,7 @@ open class GLES2TextureAsset: GLES2BaseModelAsset {
             18, 19, 16,
             // Bottom
             20, 21, 22,
-            22, 23, 20
+            22, 23, 20,
         ]
         super.create()
         let path: String = Bundle.main.path(forResource: GLES2TextureAssetPath, ofType: nil)!
@@ -80,4 +80,3 @@ open class GLES2TextureAsset: GLES2BaseModelAsset {
         return
     }
 }
-

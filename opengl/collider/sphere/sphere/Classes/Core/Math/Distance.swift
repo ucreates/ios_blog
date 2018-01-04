@@ -9,8 +9,8 @@
 // ======================================================================
 import Foundation
 open class Distance {
-    open static func create(start:Float, end:Float) -> Float {
-        var distance:Float = fabsf(start - end)
+    open static func create(start: Float, end: Float) -> Float {
+        var distance: Float = fabsf(start - end)
         distance = powf(distance, 2)
         return sqrtf(distance)
     }

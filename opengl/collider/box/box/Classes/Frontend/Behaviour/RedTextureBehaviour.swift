@@ -14,7 +14,7 @@ open class RedTextureBehaviour: BaseBehaviour {
         super.init()
         self.id = 0
     }
-    override open func onCreate() -> Void {
+    open override func onCreate() -> Void {
         let vartexSharder: GLES2ShaderAsset = GLES2ShaderAsset(shaderAssetPath: "Shaderes/Texture/vertex_shader.glsl", shaderType: GLenum(GL_VERTEX_SHADER))
         let fragmentSharder: GLES2ShaderAsset = GLES2ShaderAsset(shaderAssetPath: "Shaderes/Texture/fragment_shader.glsl", shaderType: GLenum(GL_FRAGMENT_SHADER))
         self.renderAsset = GLES2TextureAsset(GLES2TextureAssetPath: "Textures/texture01.png")
@@ -30,7 +30,7 @@ open class RedTextureBehaviour: BaseBehaviour {
         }
         return
     }
-    override open func onUpdate(delta: TimeInterval) -> Void {
+    open override func onUpdate(delta: TimeInterval) -> Void {
         let npos: GLKVector3 = Bezier.create(currentTime: self.time, totalTime: 5.0, start: GLKVector3(v: (-2.0, 0, 5.0)), control: GLKVector3(v: (-1.0, 5, 2.5)), end: GLKVector3(v: (0.0, 0, 0)))
         let nrx: Float = self.renderAsset.transform.rotation.x + 5
         let nry: Float = self.renderAsset.transform.rotation.y + 5
@@ -40,7 +40,7 @@ open class RedTextureBehaviour: BaseBehaviour {
         self.time += 0.1
         return
     }
-    override open func onCollisionEnter(behaviour: BaseBehaviour) -> Void {
+    open override func onCollisionEnter(behaviour: BaseBehaviour) -> Void {
         self.destroy = true
         return
     }

@@ -12,7 +12,7 @@ open class SphereCollider: BaseCollider {
     override init(renderAsset: GLES2BaseModelAsset) {
         super.init(renderAsset: renderAsset)
     }
-    override open func isIntersected(renderAsset: GLES2BaseModelAsset) -> Bool {
+    open override func isIntersected(renderAsset: GLES2BaseModelAsset) -> Bool {
         let opx: Float = self.ownerRenderAsset.transform.position.x
         let opy: Float = self.ownerRenderAsset.transform.position.y
         let opz: Float = self.ownerRenderAsset.transform.position.z

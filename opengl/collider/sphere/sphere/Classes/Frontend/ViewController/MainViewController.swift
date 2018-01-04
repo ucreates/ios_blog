@@ -11,7 +11,7 @@ import UIKit
 import GLKit
 open class MainViewController: GLKViewController, GLKViewControllerDelegate {
     fileprivate var glview: GLES2View!
-    override open func viewDidLoad() -> Void {
+    open override func viewDidLoad() -> Void {
         super.viewDidLoad()
         let behaviour1: BaseBehaviour = RedTextureBehaviour()
         let behaviour2: BaseBehaviour = BlueTextureBehaviour()
@@ -25,11 +25,11 @@ open class MainViewController: GLKViewController, GLKViewControllerDelegate {
         self.preferredFramesPerSecond = 60
         return
     }
-    override open func didReceiveMemoryWarning() -> Void {
+    open override func didReceiveMemoryWarning() -> Void {
         super.didReceiveMemoryWarning()
         return
     }
-    override open func glkView(_ view: GLKView, drawIn rect: CGRect) -> Void {
+    open override func glkView(_ view: GLKView, drawIn rect: CGRect) -> Void {
         self.glview.onDrawFrame(delta: self.timeSinceLastUpdate)
         return
     }
@@ -37,4 +37,3 @@ open class MainViewController: GLKViewController, GLKViewControllerDelegate {
         return
     }
 }
-

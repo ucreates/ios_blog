@@ -22,7 +22,7 @@ open class GLES2Renderer: BaseRenderer {
         let fhandle: GLuint = fragmentSharder.getHandle()
         glAttachShader(self.programHandle, vhandle)
         glAttachShader(self.programHandle, fhandle)
-        if(BaseModelAsset.CUBE == model.type) {
+        if (BaseModelAsset.CUBE == model.type) {
             glBindAttribLocation(self.programHandle, Vertex.Attributes.position.rawValue, "a_Position")
             glBindAttribLocation(self.programHandle, Vertex.Attributes.color.rawValue, "a_Color")
         } else if (BaseModelAsset.TEXTURE == model.type) {
@@ -63,7 +63,7 @@ open class GLES2Renderer: BaseRenderer {
         glEnable(GLenum(GL_BLEND))
         glBlendFunc(GLenum(GL_SRC_ALPHA), GLenum(GL_ONE_MINUS_SRC_ALPHA))
         glUseProgram(self.programHandle)
-        if(BaseModelAsset.CUBE == renderAsset.type) {
+        if (BaseModelAsset.CUBE == renderAsset.type) {
             self.vartexSharder.updateMatrix(programHandle: self.programHandle, uniformName: "u_ProjectionMatrix", matrixArray: pmtx)
             self.vartexSharder.updateMatrix(programHandle: self.programHandle, uniformName: "u_ModelViewMatrix", matrixArray: mvmtx)
             self.vartexSharder.updateVertex(programHandle: self.programHandle, attributeName: "a_Position", size: VertexBufferObject.COORDS_PER_VERTEX, vbo: renderAsset.vbo)
@@ -82,7 +82,7 @@ open class GLES2Renderer: BaseRenderer {
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), renderAsset.vbo.id)
         glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), renderAsset.ibo.id)
         glDrawElements(GLenum(GL_TRIANGLES), GLsizei(GLuint(renderAsset.indices.count)), GLenum(GL_UNSIGNED_BYTE), nil)
-        if(BaseModelAsset.CUBE == renderAsset.type) {
+        if (BaseModelAsset.CUBE == renderAsset.type) {
             self.vartexSharder.disableVertex(programHandle: self.programHandle, attributeName: "a_Position")
             self.vartexSharder.disableVertex(programHandle: self.programHandle, attributeName: "a_Color")
         } else if (BaseModelAsset.TEXTURE == renderAsset.type) {
